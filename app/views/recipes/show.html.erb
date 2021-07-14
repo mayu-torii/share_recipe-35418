@@ -4,7 +4,7 @@
       <p class="prototype__hedding">
         <%= @recipe.title %>
       </p>
-      <%= link_to "by #{@recipe.user.name}", root_path, class: :prototype__user %>
+      <%= link_to "by #{@recipe.user.name}", user_path(@recipe.user), class: :prototype__user %>
       <% if current_user == @recipe.user%>
         <div class="prototype__manage">
           <%= link_to "編集する", edit_recipe_path(@recipe), class: :prototype__btn %>
